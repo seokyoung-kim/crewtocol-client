@@ -76,7 +76,7 @@ const EditButton = styled.button`
   height: 100%;
   cursor: pointer;
   border: 0;
-  width: 90%;
+  width: 300px;
   justify-content: center;
   font-size: 16px;
 
@@ -100,7 +100,7 @@ const DeleteButton = styled.button`
   height: 100%;
   cursor: pointer;
   border: 0;
-  width: 90%;
+  width: 300px;
   justify-content: center;
   font-size: 16px;
 
@@ -113,10 +113,9 @@ const DeleteButton = styled.button`
   // }
 `;
 
-
 const ButtonWrapper = styled.div`
-display: flex;
-gap: 24px;
+  display: flex;
+  gap: 20px;
 `;
 
 const PostInfo = ({ name, value, img }) => {
