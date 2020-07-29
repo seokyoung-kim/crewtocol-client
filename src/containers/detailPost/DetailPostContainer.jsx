@@ -13,8 +13,8 @@ const DetailPostContainer = () => {
 
   const { id } = useParams();
 
-  const onDelete = (e) => {
-    axios.delete(`http://localhost:8080/api/v1/study/${id}`)
+  const onDelete = async (e) => {
+    await axios.delete(`http://localhost:8080/api/v1/study/${id}`)
     history.push(`/`);
   }
 
