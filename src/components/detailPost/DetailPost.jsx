@@ -65,7 +65,59 @@ const DescriptionContainer = styled.div`
   line-height: 1.6;
 `;
 
-const EditButton = styled.div``;
+const EditButton = styled.button`
+  background-color: #5856d6;
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+  border: 0;
+  width: 90%;
+  justify-content: center;
+  font-size: 16px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  // svg {
+  //   margin-right: 8px;
+  // }
+`;
+
+const DeleteButton = styled.button`
+  background-color: #5856d6;
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+  border: 0;
+  width: 90%;
+  justify-content: center;
+  font-size: 16px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  // svg {
+  //   margin-right: 8px;
+  // }
+`;
+
+
+const ButtonWrapper = styled.div`
+display: flex;
+gap: 24px;
+`;
 
 const PostInfo = ({ name, value, img }) => {
   return (
@@ -81,8 +133,16 @@ const PostInfo = ({ name, value, img }) => {
   );
 };
 
-const DetailPost = ({ data, id }) => {
-  const { title, content, author, headCount, modifiedDate, location, language } = data;
+const DetailPost = ({ data, id, onDelete }) => {
+  const {
+    title,
+    content,
+    author,
+    headCount,
+    modifiedDate,
+    location,
+    language,
+  } = data;
 
   return (
     <Wrapper>
@@ -118,9 +178,12 @@ const DetailPost = ({ data, id }) => {
         <Title>상세 정보</Title>
         {content}
       </DescriptionContainer>
-      <Link to={`/edit/${id}`}>
-        <EditButton>수정하기</EditButton>
-      </Link>
+      <ButtonWrapper>
+        <Link to={`/edit/${id}`}>
+          <EditButton>수정하기</EditButton>
+        </Link>
+        <DeleteButton onClick={onDelete}>삭제하기</DeleteButton>
+      </ButtonWrapper>
     </Wrapper>
   );
 };
