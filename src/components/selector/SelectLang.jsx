@@ -6,38 +6,33 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 
 const useStyles = makeStyles(() => ({
-  fixedLabel:{
-    minWidth:130, 
+  fixedLabel: {
+    minWidth: 130,
   },
   formControl: {
     minWidth: 100,
   },
 }));
 
-
-export default function SelectLang() {
+export default function SelectLang({ language, setLanguage }) {
   const classes = useStyles();
-  const [state, setState] = useState('');
 
   const handleChange = (e) => {
-    const language = e.target.value;
-    setState({
-      [language]: e.target.value,
-    });
+    setLanguage(e.target.value);
   };
-  console.log(state);
+  console.log(language);
 
   return (
     <div>
       <FormControl className={classes.formControl}>
         <InputLabel htmlFor="grouped-select">언어</InputLabel>
-        <Select 
-          value={state.language}
+        <Select
+          value={language}
           onChange={handleChange}
-          className={classes.fixedLabel}  
-          defaultValue="" 
+          className={classes.fixedLabel}
+          defaultValue=""
           id="grouped-select"
-          >
+        >
           <MenuItem value="C">C</MenuItem>
           <MenuItem value="C#">C#</MenuItem>
           <MenuItem value="C++">C++</MenuItem>

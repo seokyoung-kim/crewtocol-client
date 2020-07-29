@@ -14,25 +14,19 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-export default function SelectHeadCount() {
+export default function SelectHeadCount({ headCount, setHeadCount }) {
   const classes = useStyles();
-  const [state, setState] = useState('');
 
   const handleChange = (e) => {
-    const headCount = e.target.value;
-    setState({
-      [headCount]: e.target.value,
-    });
+    setHeadCount(e.target.value);
   };
-  console.log(state);
-
 
   return (
     <div>
       <FormControl className={classes.formControl}>
         <InputLabel htmlFor="grouped-select">모집 인원</InputLabel>
         <Select
-          value={state.headCount}
+          value={headCount}
           onChange={handleChange}
           className={classes.fixedLabel}
           defaultValue=""

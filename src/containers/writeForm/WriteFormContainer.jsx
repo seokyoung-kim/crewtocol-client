@@ -17,14 +17,14 @@ const WriteFormContainer = () => {
   const contentInput = useInput('');
 
   const onSubmit = (e) => {
-    axios.post('http://localhost:8080/api/v1/study', {
+    axios.post(`http://localhost:8080/api/v1/study`, {
       title: titleInput.value,
       content: contentInput.value,
-      // location:
-      // language:
-      // headCount
+      location: location,
+      language: language,
+      headCount: headCount,
     });
-    history.push(`/detail/${id}`);
+    history.push(`/`);
   };
 
   return (
@@ -32,6 +32,12 @@ const WriteFormContainer = () => {
       titleInput={titleInput}
       contentInput={contentInput}
       onSubmit={onSubmit}
+      headCount={headCount}
+      language={language}
+      location={location}
+      setHeadCount={setHeadCount}
+      setLanguage={setLanguage}
+      setLocation={setLocation}
     />
   );
 };

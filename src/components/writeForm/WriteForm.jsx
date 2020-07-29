@@ -127,41 +127,63 @@ const SubmintButton = styled.button`
   }
 `;
 
-const LangForm = ({ title }) => {
+const LangForm = ({ title, language, setLanguage }) => {
   return (
     <FormItemWrapper>
       <ItemTitle>{title}</ItemTitle>
-      <SelectLang />
+      <SelectLang language={language} setLanguage={setLanguage} />
     </FormItemWrapper>
   );
 };
 
-const LocationForm = ({ title }) => {
+const LocationForm = ({ title, location, setLocation }) => {
   return (
     <FormItemWrapper>
       <ItemTitle>{title}</ItemTitle>
-      <SelectLocal />
+      <SelectLocal location={location} setLocation={setLocation} />
     </FormItemWrapper>
   );
 };
 
-const HeadCountForm = ({ title }) => {
+const HeadCountForm = ({ title, headCount, setHeadCount }) => {
   return (
     <FormItemWrapper>
       <ItemTitle>{title}</ItemTitle>
-      <SelectHeadCount />
+      <SelectHeadCount headCount={headCount} setHeadCount={setHeadCount} />
     </FormItemWrapper>
   );
 };
 
-const WriteForm = ({ titleInput, contentInput, onSubmit }) => {
+const WriteForm = ({
+  titleInput,
+  contentInput,
+  onSubmit,
+  headCount,
+  language,
+  location,
+  setHeadCount,
+  setLanguage,
+  setLocation,
+}) => {
   return (
     <Wrapper>
       <Title>스터디 모집</Title>
       <StudyForm>
-        <LangForm title="언어를 지정해주세요" />
-        <LocationForm title="지역을 지정해주세요" />
-        <HeadCountForm title="인원수를 지정해주세요" />
+        <LangForm
+          title="언어를 지정해주세요"
+          language={language}
+          setLanguage={setLanguage}
+        />
+        <LocationForm
+          title="지역을 지정해주세요"
+          location={location}
+          setLocation={setLocation}
+        />
+        <HeadCountForm
+          title="인원수를 지정해주세요"
+          headCount={headCount}
+          setHeadCount={setHeadCount}
+        />
         <TitleForm>
           <div>제목을 작성해주세요</div>
           <input

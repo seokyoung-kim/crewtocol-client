@@ -12,28 +12,23 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-export default function SelectLocal() {
+export default function SelectLocal({ location, setLocation }) {
   const classes = useStyles();
-  const [state, setState] = useState('');
 
   const handleChange = (e) => {
-    const location = e.target.value;
-    setState({
-      [location]: e.target.value,
-    });
+    setLocation(e.target.value);
   };
-  console.log(state);
 
   return (
     <div>
       <FormControl className={classes.formControl}>
         <InputLabel htmlFor="grouped-select">지역</InputLabel>
-        <Select 
-          value={state.location}
+        <Select
+          value={location}
           onChange={handleChange}
-          defaultValue="" 
+          defaultValue=""
           id="grouped-select"
-          >
+        >
           <ListSubheader>서울특별시</ListSubheader>
           <MenuItem value="서울">서울</MenuItem>
           <ListSubheader>경기도</ListSubheader>

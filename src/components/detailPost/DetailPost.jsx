@@ -114,8 +114,8 @@ const DeleteButton = styled.button`
 `;
 
 const ButtonWrapper = styled.div`
-  display: flex;
-  gap: 20px;
+display: flex;
+gap: 20px;
 `;
 
 const PostInfo = ({ name, value, img }) => {
