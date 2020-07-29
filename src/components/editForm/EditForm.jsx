@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import TextareaAutosize from 'react-textarea-autosize';
 import Responsive from '../common/Responsive';
 import colors from '../../styles/colors';
+import SelectLang from '../selector/SelectLang';
+import SelectLocal from '../selector/SelectLocal';
+import SelectHeadCount from '../selector/SelectHeadCount';
 
 const Wrapper = styled(Responsive)`
   margin-top: 40px;
@@ -124,23 +127,62 @@ const SubmintButton = styled.button`
   }
 `;
 
-const FormItem = ({ title }) => {
+const LangForm = ({ title, language, setLanguage }) => {
   return (
     <FormItemWrapper>
       <ItemTitle>{title}</ItemTitle>
-      <Select type="select"> </Select>
+      <SelectLang language={language} setLanguage={setLanguage} />
     </FormItemWrapper>
   );
 };
 
-const EditForm = ({ titleInput, contentInput, onEdit }) => {
+const LocationForm = ({ title, location, setLocation }) => {
+  return (
+    <FormItemWrapper>
+      <ItemTitle>{title}</ItemTitle>
+      <SelectLocal location={location} setLocation={setLocation} />
+    </FormItemWrapper>
+  );
+};
+
+const HeadCountForm = ({ title, headCount, setHeadCount }) => {
+  return (
+    <FormItemWrapper>
+      <ItemTitle>{title}</ItemTitle>
+      <SelectHeadCount headCount={headCount} setHeadCount={setHeadCount} />
+    </FormItemWrapper>
+  );
+};
+
+const EditForm = ({   
+  titleInput,
+  contentInput,
+  onEdit,
+  headCount,
+  language,
+  location,
+  setHeadCount,
+  setLanguage,
+  setLocation, }) => {
   return (
     <Wrapper>
       <Title>수정하기</Title>
       <StudyForm>
-        <FormItem title="언어를 지정해주세요" />
-        <FormItem title="지역을 지정해주세요" />
-        <FormItem title="인원수를 지정해주세요" />
+        <LangForm
+          title="언어를 지정해주세요"
+          language={language}
+          setLanguage={setLanguage}
+        />
+        <LocationForm
+          title="지역을 지정해주세요"
+          location={location}
+          setLocation={setLocation}
+        />
+        <HeadCountForm
+          title="인원수를 지정해주세요"
+          headCount={headCount}
+          setHeadCount={setHeadCount}
+        />
         <TitleForm>
           <div>제목을 작성해주세요</div>
           <input

@@ -10,17 +10,24 @@ const EditFormContainer = () => {
   
   const { id } = useParams();
 
+  const [headCount, setHeadCount] = useState();
+  const [language, setLanguage] = useState();
+  const [location, setLocation] = useState();
+
   const history = useHistory();
   const titleInput = useInput('');
   const contentInput = useInput('');
 
-  const onEdit = (e) => {
-    axios.put(`http://localhost:8080/api/v1/study/${id}`, {
+  const onEdit = useCallback(async (e) => {
+    await axios.put(`http://localhost:8080/api/v1/study/${id}`, {
       title: titleInput.value,
-      content: contentInput.value
+      content: contentInput.value,
+      location: location,
+      language: language,
+      headCount: headCount,
     });
     history.push(`/detail/${id}`);
-  };
+  });
 
   const fetchData = useCallback(async () => {
     const { data } = await axios.get(`http://localhost:8080/api/v1/study/${id}`);
@@ -38,6 +45,9 @@ const EditFormContainer = () => {
 
     titleInput.setValue(title);
     contentInput.setValue(content);
+    setLocation(location);
+    setLanguage(language);
+    setHeadCount(headCount);
   }
   }, [data]);
 
@@ -47,6 +57,12 @@ const EditFormContainer = () => {
       contentInput={contentInput}
       onEdit={onEdit}
       data={data}
+      headCount={headCount}
+      language={language}
+      location={location}
+      setHeadCount={setHeadCount}
+      setLanguage={setLanguage}
+      setLocation={setLocation}
     />
   );
 };
