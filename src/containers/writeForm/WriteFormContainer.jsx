@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { useHistory } from 'react-router';
 import { useParams } from 'react-router-dom';
 import WriteForm from '../../components/writeForm/WriteForm';
@@ -16,8 +16,8 @@ const WriteFormContainer = () => {
   const titleInput = useInput('');
   const contentInput = useInput('');
 
-  const onSubmit = (e) => {
-    axios.post(`http://localhost:8080/api/v1/study`, {
+  const onSubmit = useCallback(async (e) => {
+    await axios.post(`http://localhost:8080/api/v1/study`, {
       title: titleInput.value,
       content: contentInput.value,
       location: location,
@@ -25,7 +25,7 @@ const WriteFormContainer = () => {
       headCount: headCount,
     });
     history.push(`/`);
-  };
+  });
 
   return (
     <WriteForm
