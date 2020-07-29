@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import colors from '../../styles/colors';
 import Responsive from './Responsive';
 
 const Wrapper = styled(Responsive)`
