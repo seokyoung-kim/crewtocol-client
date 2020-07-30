@@ -41,7 +41,7 @@ const WriteButton = styled.div`
 
 const Filter = () => (
   <Wrapper>
-    <FilterContainer>filter</FilterContainer>
+    <FilterContainer></FilterContainer>
     <WriteButtonContainer>
       <Link to="/write">
         <WriteButton>
