@@ -29,7 +29,7 @@ const ImgWrapper = styled.div`
   img {
     width: 100%;
     height: 100%;
-    border-radius: 50%;
+    border-radius: 10%;
   }
 `;
 
@@ -101,7 +101,7 @@ const Card = ({ data }) => {
         return "https://user-images.githubusercontent.com/53217674/88882730-5f475500-d26d-11ea-9bdc-27dfb9399fad.png"
         break;  
       case "Javascript":
-        return "https://user-images.githubusercontent.com/53217674/88876195-ba714b80-d25d-11ea-8229-e57e1f5410b7.png"
+        return "https://user-images.githubusercontent.com/53217674/88882732-5f475500-d26d-11ea-893c-9bfd95e4f313.png"
         break;
       case "Kotlin" :
         return "https://user-images.githubusercontent.com/53217674/88882735-5fdfeb80-d26d-11ea-97c5-4a8b1fe84ea7.png"
