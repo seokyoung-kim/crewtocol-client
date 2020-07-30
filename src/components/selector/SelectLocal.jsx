@@ -30,10 +30,17 @@ export default function SelectLocal({ location, setLocation }) {
           id="grouped-select"
         >
           <ListSubheader>서울특별시</ListSubheader>
-          <MenuItem value="서울">서울</MenuItem>
+            <MenuItem value="종로구">종로구</MenuItem>
+            <MenuItem value="동작구">동작구</MenuItem>
+            <MenuItem value="강남구">강남구</MenuItem>
+            <MenuItem value="동대문구">동대문구</MenuItem>
+            <MenuItem value="마포구">마포구</MenuItem>
           <ListSubheader>경기도</ListSubheader>
-          <MenuItem value="수원시">수원시</MenuItem>
-          <MenuItem value="안양시">안양시</MenuItem>
+            <MenuItem value="수원시">수원시</MenuItem>
+            <MenuItem value="성남시">성남시</MenuItem>
+            <MenuItem value="안양시">안양시</MenuItem>
+            <MenuItem value="부천시">부천시</MenuItem>
+            <MenuItem value="고양시">고양시</MenuItem>
         </Select>
       </FormControl>
     </div>
