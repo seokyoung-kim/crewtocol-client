@@ -20,11 +20,7 @@ const HeaderContainer = styled(Responsive)`
 `;
 
 const Logo = styled.div`
-  height: 32px;
-
-  img {
-    height: 100%;
-  }
+  margin-left: -20px;
 `;
 
 const Navigation = styled.div`
