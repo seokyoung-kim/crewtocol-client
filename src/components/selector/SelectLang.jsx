@@ -39,6 +39,12 @@ export default function SelectLang({ language, setLanguage }) {
           <MenuItem value="Java">Java</MenuItem>
           <MenuItem value="Javascript">Javascript</MenuItem>
           <MenuItem value="Python">Python</MenuItem>
+          <MenuItem value="Go">Go</MenuItem>
+          <MenuItem value="Kotlin">Kotlin</MenuItem>
+          <MenuItem value="php">php</MenuItem>
+          <MenuItem value="Ruby">Ruby</MenuItem>
+          <MenuItem value="Rust">Rust</MenuItem>
+          <MenuItem value="Swift">Swift</MenuItem>
         </Select>
       </FormControl>
     </div>
