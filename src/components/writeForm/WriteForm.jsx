@@ -201,7 +201,7 @@ const WriteForm = ({
           />
         </DescForm>
         <SubmitButtonContainer>
-          <SubmintButton onClick={onSubmit}>글쓰기</SubmintButton>
+          <SubmintButton onClick={onSubmit}>등록하기</SubmintButton>
         </SubmitButtonContainer>
       </StudyForm>
     </Wrapper>

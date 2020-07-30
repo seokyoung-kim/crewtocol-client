@@ -20,7 +20,7 @@ const Title = styled.div`
 
 const PostInfoContainer = styled.div`
   margin-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 10px;
   border-bottom: 2px solid ${colors.gray[5]};
 `;
 
@@ -198,11 +198,11 @@ const DetailPost = ({ data, id, onDelete }) => {
           img={imgUrl(language)}
         />
 
-        <PostInfo
+        {/* <PostInfo
           name="작성자"
           value={author}
           img="https://user-images.githubusercontent.com/53934996/88776319-c3f8a600-d1c0-11ea-9027-2f0acfd0f26c.png"
-        />
+        /> */}
         <PostInfo
           name="날짜"
           value={modifiedDate}

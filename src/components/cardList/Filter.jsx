@@ -46,7 +46,7 @@ const Filter = () => (
       <Link to="/write">
         <WriteButton>
           <Pencil size={14} />
-          <span>스터디 글쓰기</span>
+          <span>스터디 등록하기</span>
         </WriteButton>
       </Link>
     </WriteButtonContainer>
