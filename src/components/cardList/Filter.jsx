@@ -20,7 +20,7 @@ const FilterContainer = styled.div``;
 const WriteButtonContainer = styled.div``;
 
 const WriteButton = styled.div`
-  background-color: #5856d6;
+  background-color: #228896;
   padding: 12px 16px;
   border-radius: 8px;
   color: white;

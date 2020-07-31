@@ -29,4 +29,5 @@ export default {
   indigo: '#5856D6',
   purple: '#AF52DE',
   pink: '#FF2D55',
+  main: '#228896'
 };

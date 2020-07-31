@@ -62,7 +62,7 @@ const TitleForm = styled.div`
     }
 
     &:focus {
-      border: 2px solid ${colors.indigo};
+      border: 2px solid ${colors.main};
     }
   }
 `;
@@ -91,7 +91,7 @@ const StyledTextareaAutosize = styled(TextareaAutosize)`
   }
 
   &:focus {
-    border: 2px solid ${colors.indigo};
+    border: 2px solid ${colors.main};
   }
 `;
 
@@ -104,7 +104,7 @@ const SubmitButtonContainer = styled.div`
 `;
 
 const SubmintButton = styled.button`
-  background-color: #5856d6;
+  background-color: #228896;
   padding: 12px 16px;
   border-radius: 8px;
   color: white;

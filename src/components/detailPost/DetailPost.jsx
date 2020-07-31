@@ -66,7 +66,7 @@ const DescriptionContainer = styled.div`
 `;
 
 const EditButton = styled.button`
-  background-color: #5856d6;
+  background-color: #228896;
   padding: 12px 16px;
   border-radius: 8px;
   color: white;
@@ -90,7 +90,7 @@ const EditButton = styled.button`
 `;
 
 const DeleteButton = styled.button`
-  background-color: #5856d6;
+  background-color: #228896;
   padding: 12px 16px;
   border-radius: 8px;
   color: white;
