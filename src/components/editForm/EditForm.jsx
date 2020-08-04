@@ -186,13 +186,13 @@ const EditForm = ({
           <input
             value={titleInput.value}
             onChange={titleInput.onChange}
-            placeholder="ex) C언어 기초공사 스터디"
+            placeholder="ex) 자바 기초공사 스터디 구합니다."
           />
         </TitleForm>
         <DescForm>
           <div>자세한 내용을 작성해주세요</div>
           <StyledTextareaAutosize
-            placeholder="ex) "
+            placeholder="ex) 자바 스터디원 모집합니다."
             value={contentInput.value}
             onChange={contentInput.onChange}
           />
