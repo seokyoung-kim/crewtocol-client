@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import axios from 'axios';
+import React from 'react';
 import styled from 'styled-components';
 import Filter from '../../components/cardList/Filter';
 import CardList from '../../components/cardList/CardList';

@@ -36,8 +36,6 @@ const ItemTitle = styled.div`
   font-weight: 500;
 `;
 
-const Select = styled.select``;
-
 const TitleForm = styled.div`
   margin-top: 50px;
 

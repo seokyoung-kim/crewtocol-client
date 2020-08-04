@@ -1,13 +1,10 @@
 import React, { useState, useCallback } from 'react';
 import { useHistory } from 'react-router';
-import { useParams } from 'react-router-dom';
 import WriteForm from '../../components/writeForm/WriteForm';
 import useInput from '../../lib/hooks/useInput';
 import axios from 'axios';
 
 const WriteFormContainer = () => {
-  const { id } = useParams();
-
   const [headCount, setHeadCount] = useState();
   const [language, setLanguage] = useState();
   const [location, setLocation] = useState();
