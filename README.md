@@ -14,7 +14,7 @@ REST API를 통한 React와 SpringBoot의 통신
 
 ### Architecture
 + Endpoints <br>
-<img src="https://user-images.githubusercontent.com/53217674/89498098-887d5d80-d7f8-11ea-85fe-96e64054ad1b.png" width="720px" height="280px" title="px(픽셀) 크기 설정" alt="System"></img><br/>
+<img src="https://user-images.githubusercontent.com/53217674/89498098-887d5d80-d7f8-11ea-85fe-96e64054ad1b.png" width="720px" height="250px" title="px(픽셀) 크기 설정" alt="System"></img><br/>
 
 + hooks를 이용한 상태 관리
 
@@ -24,7 +24,7 @@ REST API를 통한 React와 SpringBoot의 통신
 3. ```git clone https://github.com/seokyoung-kim/crewtocol-client```
 
 ### How to Start
-1. cd crewtocol-client
+1. ```cd crewtocol-client```
 2. yarn install
 3. yarn start
 
